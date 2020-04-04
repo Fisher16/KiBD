@@ -19,10 +19,16 @@ NEWSPIDER_MODULE = 'domain_ssl.spiders'
 USER_AGENT = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-#CONCURRENT_REQUESTS = 32
+#$ ulimit -n 4096 for open files err
+CONCURRENT_REQUESTS = 16
+#fix DNS lookups errors
+REACTOR_THREADPOOL_MAXSIZE = 4
+RETRY_ENABLED = False
+LOG_LEVEL = 'INFO'
+DOWNLOAD_TIMEOUT = 5
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
@@ -33,7 +39,7 @@ ROBOTSTXT_OBEY = True
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-#COOKIES_ENABLED = False
+COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False

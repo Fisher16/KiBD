@@ -1,0 +1,7 @@
+﻿Name;OS;Accuracy [%]
+funbox.home;WAP: Linux, Linux(2.6.X);100
+desktop-57bsmfm.home;general purpose: Microsoft, Windows(XP);85
+pc-3.home;general purpose: Linux, Linux(2.6.X);100
+pc-888.home;firewall: Fortinet, embedded;87
+laptop-9lmh9grv.home;specialized: AVtech, embedded;87
+hal.home;general purpose: Linux, Linux(3.X);100
